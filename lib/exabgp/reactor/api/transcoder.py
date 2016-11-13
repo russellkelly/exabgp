@@ -102,7 +102,7 @@ class Transcoder (object):
 					message.data = "The peer sent a invalid message notification (too long)"
 				else:
 					try:
-						message.data = message.data.decode('utf-8')
+						message.data = message.data.decode('utf-8').replace('\r',' ').replace('\n',' ')
 					except KeyboardInterrupt:
 						raise
 					except Exception:
