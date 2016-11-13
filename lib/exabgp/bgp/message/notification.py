@@ -94,6 +94,8 @@ class Notification (Message):
 		(6,6): "Other Configuration Change",
 		(6,7): "Connection Collision Resolution",
 		(6,8): "Out of Resources",
+		(6,9): "Shutdown Message", # draft-snijders-idr-shutdown-message
+
 		# draft-keyur-bgp-enhanced-route-refresh-00
 		(7,1): "Invalid Message Length",
 		(7,2): "Malformed Message Subtype",
