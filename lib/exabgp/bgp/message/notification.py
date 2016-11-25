@@ -87,14 +87,13 @@ class Notification (Message):
 		(6,0): "Unspecific",
 		# RFC 4486
 		(6,1): "Maximum Number of Prefixes Reached",
-		(6,2): "Administrative Shutdown",
+		(6,2): "Administrative Shutdown", # draft-snijders-idr-shutdown-message
 		(6,3): "Peer De-configured",
 		(6,4): "Administrative Reset",
 		(6,5): "Connection Rejected",
 		(6,6): "Other Configuration Change",
 		(6,7): "Connection Collision Resolution",
-		(6,8): "Out of Resources",
-		(6,9): "Shutdown Message", # draft-snijders-idr-shutdown-message
+		(6,8): "Out of Resources"
 
 		# draft-keyur-bgp-enhanced-route-refresh-00
 		(7,1): "Invalid Message Length",

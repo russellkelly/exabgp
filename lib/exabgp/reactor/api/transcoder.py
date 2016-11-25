@@ -97,7 +97,7 @@ class Transcoder (object):
 
 		if content == 'notification':
 			message = Notification.unpack_message(raw)
-			if (message.code, message.subcode) == (6,9):
+			if (message.code, message.subcode) == (6, 2):
 				if len(message.data) > 128:
 					message.data = "The peer sent a invalid message notification (too long)"
 				else:
