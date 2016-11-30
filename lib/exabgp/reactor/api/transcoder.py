@@ -98,11 +98,12 @@ class Transcoder (object):
 		if content == 'notification':
 			message = Notification.unpack_message(raw)
 			if (message.code, message.subcode) == (6, 2):
-				if len(message.data) > 128:
+				if len(message.data) > 128+8:
 					message.data = "The peer sent a invalid message notification (too long)"
 				else:
 					try:
-						message.data = message.data.decode('utf-8').replace('\r',' ').replace('\n',' ')
+                        length = message.data[0]
+                        message.data = message.data[0:length].decode('utf-8').replace('\r',' ').replace('\n',' ')
 					except KeyboardInterrupt:
 						raise
 					except Exception:
